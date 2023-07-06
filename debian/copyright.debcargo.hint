@@ -4,8 +4,20 @@ Upstream-Contact: Martin Geisler <martin@geisler.net>
 Source: https://github.com/mgeisler/smawk
 
 Files: *
-Copyright: 2017-2022 Martin Geisler <martin@geisler.net>
+Copyright: FIXME (overlay) UNKNOWN-YEARS Martin Geisler <martin@geisler.net>
 License: MIT
+Comment:
+ FIXME (overlay): Since upstream copyright years are not available in
+ Cargo.toml, they were extracted from the upstream Git repository. This may not
+ be correct information so you should review and fix this before uploading to
+ the archive.
+
+Files: ./LICENSE
+Copyright: 2017 Martin Geisler
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
 
 Files: debian/*
 Copyright:
