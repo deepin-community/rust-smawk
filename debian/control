@@ -1,15 +1,32 @@
-Source: template-repository
-Section: unknown
+Source: rust-smawk
+Section: rust
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Sylvestre Ledru <sylvestre@debian.org>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/smawk]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/smawk
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: librust-smawk-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+Provides:
+ librust-smawk+default-dev (= ${binary:Version}),
+ librust-smawk-0-dev (= ${binary:Version}),
+ librust-smawk-0+default-dev (= ${binary:Version}),
+ librust-smawk-0.3-dev (= ${binary:Version}),
+ librust-smawk-0.3+default-dev (= ${binary:Version}),
+ librust-smawk-0.3.1-dev (= ${binary:Version}),
+ librust-smawk-0.3.1+default-dev (= ${binary:Version})
+Description: Functions for finding row-minima in a totally monotone matrix - Rust source code
+ This package contains the source for the Rust smawk crate, packaged by debcargo
+ for use with cargo and dh-cargo.
